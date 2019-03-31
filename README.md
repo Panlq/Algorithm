@@ -1,6 +1,2 @@
-# leetcode & 牛客网
-练习题记录
-### LeetCode
-刷题记录
+# leetcode & 牛客网 & 剑指offer
 
-### 牛客剑指
