@@ -27,10 +27,35 @@ def twoSum(nums, target):
   buff_dict = {}
   for i in range(len(nums)):
     if nums[i] in buff_dict:
-      return [buff_dict[nums[i]], i]
-    else:
-      buff_dict[target-nums[i]] = i
+      return [buff_dict[nums[i]] + 1, i + 1]
+    buff_dict[target-nums[i]] = i
       
+
+def twoSum2(nums, target):
+    # 双指针解法
+    if len(nums) <= 1:
+        return None
+
+    i, j = 0, len(nums) - 1
+    while i < j:
+        s = nums[i] + nums[j]
+        if s == target:
+            return i + 1, j + 1
+        elif s < target:
+            i += 1
+        else:
+            j -= 1
+        
+    return None
+    
       
-  # >>>twoSum([3,2,4], 6)
-  # 如果判断的有重复的如[3, 2, 4, 3]  可以添加一个列表来存储满足的对象，然后在输出！
+# >>>twoSum([3,2,4], 6)
+# 如果判断的有重复的如[3, 2, 4, 3]  可以添加一个列表来存储满足的对象，然后在输出！
+
+
+if __name__ == '__main__':
+    nums = [2, 7, 11, 15]
+    target = 9
+    print(twoSum(nums, target))
+    print(twoSum2(nums, target))
+    

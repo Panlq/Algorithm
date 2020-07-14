@@ -6,6 +6,13 @@ LeetCode 上第 153 号问题：寻找旋转排序数组中的最小值。也是
 ## 数组中存在重复元素
 思路参考:https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array-ii/solution/er-fen-fa-fen-zhi-fa-python-dai-ma-by-liweiwei1419/
 """
+
+"""
+关于中点计算的一些探讨:
+mid = (left + right) / 1  # 当left和right都很大的时候该方法可能会发生整型溢出
+mid = left + (right - left) / 2  # 建议使用此方法计算mid 
+在python中 当发生整型溢出以后，类型自动升为long
+"""
 from typing import List
 
 
