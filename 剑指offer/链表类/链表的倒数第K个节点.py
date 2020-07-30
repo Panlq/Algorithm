@@ -29,7 +29,7 @@ class Solution:
             else:
                 return None
         while aPoint.next != None:
-            aPoint = apaPoint.next
+            aPoint = aPoint.next
             bPoint = bPoint.next
         return bPoint
 

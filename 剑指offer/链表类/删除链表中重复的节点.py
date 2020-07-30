@@ -33,10 +33,10 @@ def remove_dups_without_set(head):
     """
     current = head
     while current:
-        renner = current
+        runner = current
         while runner.next:
             if runner.next.val == current.val:
-                renner.next = runner.next.next
+                runner.next = runner.next.next
             else:
                 runner = runner.next
         current = current.next
